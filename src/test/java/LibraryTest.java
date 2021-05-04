@@ -1,7 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.awt.print.Book;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,7 +11,7 @@ public class LibraryTest {
 
     @Before
     public void setUp(){
-        library = new Library();
+        library = new Library(10);
         book = new Books("Lord Of The Rings", "Tolkien", "Fiction");
     }
 
@@ -36,5 +35,26 @@ public class LibraryTest {
         library.addBook(book);
         library.removeBook(book);
         assertEquals(2, library.stockCount());
+    }
+
+    @Test
+    public void hasCapacity(){
+        assertEquals(10, library.checkCapacity());
+    }
+
+    @Test
+    public void capacityCanChange(){
+        library.addBook(book);
+        assertEquals(9, library.checkCapacity());
+    }
+    @Test
+    public void capacityFull(){
+        Library library2 = new Library(2);
+        library2.addBook(book);
+        library2.addBook(book);
+        library2.addBook(book);
+        library2.addBook(book);
+        library2.addBook(book);
+        assertEquals(0, library2.checkCapacity());
     }
 }
