@@ -34,4 +34,12 @@ public class Library {
     public int checkCapacity() {
         return this.capacity;
     }
+
+    public boolean stockStatus() {
+        if(this.capacity > 0){
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

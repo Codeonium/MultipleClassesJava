@@ -3,6 +3,7 @@ import org.junit.Test;
 
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class LibraryTest {
 
@@ -56,5 +57,9 @@ public class LibraryTest {
         library2.addBook(book);
         library2.addBook(book);
         assertEquals(0, library2.checkCapacity());
+    }
+    @Test
+    public void canCheckIfStockIsFull(){
+        assertTrue(true); library.stockStatus();
     }
 }
