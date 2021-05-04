@@ -1,17 +1,17 @@
 public class Books {
 
-    private String name;
+    private String title;
     private String author;
     private String genre;
 
-    public Books(String name, String author, String genre) {
-        this.name = name;
+    public Books(String title, String author, String genre) {
+        this.title = title;
         this.author = author;
         this.genre = genre;
     }
 
-    public String getName() {
-        return this.name;
+    public String getTitle() {
+        return this.title;
     }
 
     public String getAuthor() {

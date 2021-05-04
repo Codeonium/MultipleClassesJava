@@ -14,8 +14,8 @@ public class BooksTest {
     }
 
     @Test
-    public void hasName(){
-        assertEquals("Lord Of The Rings", book.getName());
+    public void hasTitle(){
+        assertEquals("Lord Of The Rings", book.getTitle());
     }
 
     @Test
