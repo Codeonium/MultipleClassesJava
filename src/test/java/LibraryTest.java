@@ -62,4 +62,9 @@ public class LibraryTest {
     public void canCheckIfStockIsFull(){
         assertTrue(true); library.stockStatus();
     }
+
+    @Test
+    public void hasCollection(){
+        assertEquals(2, library.collector());
+    }
 }

@@ -1,12 +1,23 @@
 import com.sun.tools.corba.se.idl.constExpr.Not;
 
+import java.awt.print.Book;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
 
     private String name;
     private ArrayList<Books> stock;
     private Integer capacity;
+    private HashMap<String,String> bookCollection;
+
+    public static void main(String[] args) {
+        HashMap<String, String> bookCollection = new HashMap<String, String>();
+            bookCollection.put("Book", "LOTR");
+            bookCollection.put("Book", "The Hobbit");
+    }
+
+
 
     public Library(int capacity){
         this.stock = new ArrayList<Books>();
@@ -41,5 +52,9 @@ public class Library {
         } else {
             return true;
         }
+    }
+
+    public String collector() {
+        return this.bookCollection.get("Book");
     }
 }
