@@ -65,6 +65,7 @@ public class LibraryTest {
 
     @Test
     public void hasCollection(){
-        assertEquals(2, library.collector());
+        library.bookCollection.put("Book", "LOTR");
+        assertEquals("LOTR", library.collector());
     }
 }

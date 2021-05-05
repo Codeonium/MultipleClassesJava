@@ -9,19 +9,12 @@ public class Library {
     private String name;
     private ArrayList<Books> stock;
     private Integer capacity;
-    private HashMap<String,String> bookCollection;
-
-    public static void main(String[] args) {
-        HashMap<String, String> bookCollection = new HashMap<String, String>();
-            bookCollection.put("Book", "LOTR");
-            bookCollection.put("Book", "The Hobbit");
-    }
-
-
+    private HashMap<String, String> bookCollection;
 
     public Library(int capacity){
         this.stock = new ArrayList<Books>();
         this.capacity = capacity;
+        this.bookCollection = new HashMap<String, String>();
     }
 
     public void addBook(Books book) {
@@ -55,6 +48,6 @@ public class Library {
     }
 
     public String collector() {
-        return this.bookCollection.get("Book");
+        return bookCollection.get("Book");
     }
 }
